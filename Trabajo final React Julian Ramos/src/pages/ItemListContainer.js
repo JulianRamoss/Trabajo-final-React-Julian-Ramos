@@ -26,7 +26,7 @@ const ItemListContainer = () => {
         const filtro = itemCollection.where('price', '>', 500)
         .where('price','<',600)
 
-    itemCollection.get().then((querySnapshot) => { // antes en vez de filtro estaba itemCollection, sí quiero el de los filtros, pongo el filtro
+    itemCollection.get().then((querySnapshot) => { 
       if(querySnapshot.size === 0){
         console.log("no results");
       }else{

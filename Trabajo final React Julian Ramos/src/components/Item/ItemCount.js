@@ -22,7 +22,7 @@ function ItemCount ({stock: initialStock, onAdd, name}){
         }
     }
     
-    const [pivote3, setPivote3] = useState(true);   //Llave para entrar en el if de Greetings y devolver boton de comprar o ir a carrito
+    const [pivote3, setPivote3] = useState(true);
 
     return(
         <div>

@@ -7,7 +7,7 @@ function Greeting({entrar, onAdd, intento, name, setEntrar}){
     const {items, carritoV2, setCarritoV2} = useContext(CartContext);
 
     useEffect(() => {
-        if(entrar){       //pivote que esta seteado en true hasta que se realice una compra
+        if(entrar){
             onAdd(intento);
         }
     }, [entrar, intento, addItem, onAdd]);
@@ -21,7 +21,7 @@ function Greeting({entrar, onAdd, intento, name, setEntrar}){
             }
         })
 
-        if(pivote){ //agrega más hamburguesas sí ya tenias una en el carrito
+        if(pivote){
             let hambuBuscada2 = carritoV2.findIndex((hamburguesa) => hamburguesa.item.name === name)
             var hambuBuscada3 = items.find((hamburguesa) => hamburguesa.name === name)
             let contador = carritoV2[hambuBuscada2].quantity;
@@ -33,7 +33,7 @@ function Greeting({entrar, onAdd, intento, name, setEntrar}){
             auxProducto[hambuBuscada2] = aux2
             setCarritoV2(auxProducto)
         }
-        else{ // si no tenias la hamburugesa, la añade
+        else{
             var hambuBuscada = items.find((hamburguesa) => hamburguesa.name === name)
             var aux = {
                 item: hambuBuscada,
@@ -50,6 +50,6 @@ function Greeting({entrar, onAdd, intento, name, setEntrar}){
 
     {entrar && <button onClick={addItem}>Añadir al carrito</button>}
     </>
-    );   //Sí se realiza una compra se dibuja el boton Ir a carrito
+    );
 }
 export default Greeting

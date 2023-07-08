@@ -1,4 +1,4 @@
-//Importar cositas necesarias
+
 import React, {useEffect, useState} from 'react';
 import { BrowserRouter, Switch, Route, useParams } from 'react-router-dom';
 //Importar componentes
@@ -33,7 +33,7 @@ function App() {
     const filtro = itemCollection.where('price', '>', 500)
       .where('price','<',600)
 
-    itemCollection.get().then((querySnapshot) => { // antes en vez de filtro estaba itemCollection
+    itemCollection.get().then((querySnapshot) => { 
       if(querySnapshot.size === 0){
         console.log("no results");
       }else{

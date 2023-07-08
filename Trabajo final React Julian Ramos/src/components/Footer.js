@@ -16,11 +16,11 @@ function Footer(){
             </div>
 
             <div className="foot_disclaimer">
-            <p>Todos los derechos reservados a las páginas de las que me inspire</p>
-            <p>Proyecto realizado para el curso de ReactJS de Coderhouse</p></div>
-
-
+            <p>Todos los derechos reservados a Ramos</p>
             
+
+
+            </div>
         </div>
         </>
     )

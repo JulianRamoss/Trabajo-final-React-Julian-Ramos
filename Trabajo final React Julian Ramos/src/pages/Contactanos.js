@@ -32,7 +32,7 @@ function Contactanos(){
 
         const newMensaje= {
             user: userInfo,
-            //date: firebase.firesotre.Timestamp.fromDate(new Date()),
+            
           }
           mensajes.add(newMensaje).then(({id}) => {
             setOrderId(id)

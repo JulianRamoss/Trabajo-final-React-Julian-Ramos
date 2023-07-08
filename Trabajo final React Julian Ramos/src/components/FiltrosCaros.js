@@ -15,7 +15,7 @@ function FiltrosCaros ({flag}) {
         const itemCollection = db.collection("Hamburguesas")
     
         const filtro = itemCollection.where('price','>',600)
-        filtro.get().then((querySnapshot) => { // antes en vez de filtro estaba itemCollection, sí quiero el de los filtros, pongo el filtro
+        filtro.get().then((querySnapshot) => {
             if(querySnapshot.size === 0){
               console.log("no results");
             }else{

@@ -43,7 +43,7 @@ function Cart(){
             buyer: userInfo,
             items: carritoV2,
             total,
-            //date: firebase.firesotre.Timestamp.fromDate(new Date()),
+            
           }
           orders.add(newOrder).then(({id}) => {
             setOrderId(id)
